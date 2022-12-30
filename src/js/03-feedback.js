@@ -1,3 +1,4 @@
+
 const form = document.querySelector('.feedback-form');
 const input = document.querySelector('input');
 const textarea = document.querySelector('textarea');
@@ -9,7 +10,7 @@ const parsed = JSON.parse(json);
 defaultForm();
 
 function onInput(){
-    localStorage.setItem(formKey, JSON.stringify({
+   localStorage.setItem(formKey, JSON.stringify({
        email : input.value,
        message : textarea.value
    }))
