@@ -17,6 +17,7 @@ function onInput(){
          json = localStorage.getItem(formKey);
          parsed = JSON.parse(json);
 
+         
     localStorage.setItem(formKey, JSON.stringify({
        email : input.value,
        message : textarea.value
