@@ -1,3 +1,4 @@
+import throttle from'lodash.throttle';
 
 const form = document.querySelector('.feedback-form');
 const input = document.querySelector('input');
@@ -8,7 +9,7 @@ const formKey = "feedback-form-state";
  let parsed = JSON.parse(json);
 
 
-form.addEventListener('input', onInput)
+form.addEventListener('input', throttle(onInput, 500))
 form.addEventListener("submit", onSubmit)
 
 defaultForm();
